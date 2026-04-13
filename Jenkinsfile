@@ -7,18 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clean Workspace') {
-            steps {
-                deleteDir()
-            }
-        }
-
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/shraddha1231/MymavenWebApp01.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
